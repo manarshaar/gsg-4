@@ -1,0 +1,34 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 7em;
+}
+
+table{
+    border-spacing: 20px;
+    background-color: #7777;
+
+}
+
+th{
+    padding-bottom: 30px;
+}
+#addButton{
+    border-radius: 2%;
+    background-color: black;
+    color: white;
+    width: 8em;
+    height: 3em;
+    margin-left: 1em;
+}
+
+button{
+    text-align: center;
+}
+
+#myInput{
+    height: 2em;
+    width: 40em;
+    text-align: left;
+    font-size: medium;
+}
