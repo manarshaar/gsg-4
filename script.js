@@ -1,28 +1,27 @@
 let tasks = [];
-tasks = JSON.parse(localStorage.getItem("tasks"));
+if(JSON.parse(localStorage.getItem("tasks")))
+  tasks = JSON.parse(localStorage.getItem("tasks"));
 
-if(tasks){
-  for (let i = 0; i < tasks.length; i++) {
-      let tr = document.createElement("tr");
-      let td0 = document.createElement("td"); td0.className ='ntask';
-      let t = document.createTextNode(tasks[i]);
-      td0.appendChild(t); 
-      tr.appendChild(td0);
+for (let i = 0; i < tasks.length; i++) {
+    let tr = document.createElement("tr");
+    let td0 = document.createElement("td"); td0.className ='ntask';
+    let t = document.createTextNode(tasks[i]);
+    td0.appendChild(t); 
+    tr.appendChild(td0);
   
-      let td1 = document.createElement("td");
-      let Be = document.createElement("button"); Be.className='editButton';
-      let E = document.createTextNode('Edit');
-      Be.appendChild(E);
-      let Bd = document.createElement("button"); Bd.className='deleteButton';
-      let D = document.createTextNode('X');
-      Bd.appendChild(D);
+    let td1 = document.createElement("td");
+    let Be = document.createElement("button"); Be.className='editButton';
+    let E = document.createTextNode('Edit');
+    Be.appendChild(E);
+    let Bd = document.createElement("button"); Bd.className='deleteButton';
+    let D = document.createTextNode('X');
+    Bd.appendChild(D);
   
-      td1.appendChild(Be); 
-      td1.appendChild(Bd); 
-      tr.appendChild(td1);
+    td1.appendChild(Be); 
+    td1.appendChild(Bd); 
+    tr.appendChild(td1);
   
-      document.getElementById('table').appendChild(tr);
-  }
+    document.getElementById('table').appendChild(tr);
 }
 
 let del = document.querySelectorAll('.deleteButton');
