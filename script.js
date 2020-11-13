@@ -1,8 +1,6 @@
 
 let tasks = [];
 localStorage.setItem("tasks", JSON.stringify(tasks));
-//if(JSON.parse(localStorage.getItem("tasks")))
-  //tasks = JSON.parse(localStorage.getItem("tasks"));
 
 for (let i = 0; i < tasks.length; i++) {
     let tr = document.createElement("tr");
