@@ -1,7 +1,7 @@
 let tasks = [];
 tasks = JSON.parse(localStorage.getItem("tasks"));
 
-if(tasks.length){
+if(tasks){
   for (let i = 0; i < tasks.length; i++) {
       let tr = document.createElement("tr");
       let td0 = document.createElement("td"); td0.className ='ntask';
